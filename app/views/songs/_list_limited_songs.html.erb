@@ -7,7 +7,7 @@
 
 <% @songs.each do |song| %>
   <tr>
-    <td><%= song.name %></td>
+    <td><%= link_to song.name, song %></td>
     <td><%= song.description %></td>
     <td>{TODO:Artist name goes here}</td>
   </tr>

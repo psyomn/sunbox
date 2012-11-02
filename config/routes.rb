@@ -1,5 +1,7 @@
 Sunbox::Application.routes.draw do
   
+  resources :newspapers
+
   match "/home"    => "static_page#home"
   match "/about"   => "static_page#about"
   match "/contact" => "static_page#contact"

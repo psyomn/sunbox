@@ -1,0 +1,4 @@
+<div class="news">
+<h4> [News | s: <%= @news_item.title %> | d: <%= @news_item.created_at %>] </h4>
+<%= h(@news_item.text).gsub("\r\n","<br/>").html_safe %>
+</div>

@@ -1,6 +1,8 @@
 <h1><%= image_tag "/favicon.ico" %> Home</h1>
 <p>Welcome to sunbox! You can either <%= link_to "Login", "#" %>, or <%= link_to "Register", "#" %>. </p>
 
+<%= render 'partials/latest_news_item' %>
+
 <h3>Newest Users</h3> 
 <%= render 'users/list_limited_users' %>
 

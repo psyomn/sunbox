@@ -1,0 +1,2 @@
+module NewspapersHelper
+end
