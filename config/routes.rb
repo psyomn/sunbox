@@ -1,4 +1,11 @@
 Sunbox::Application.routes.draw do
+  
+  match "/home"    => "static_page#home"
+  match "/about"   => "static_page#about"
+  match "/contact" => "static_page#contact"
+
+  resources :bands
+
   resources :songs
 
   resources :users
