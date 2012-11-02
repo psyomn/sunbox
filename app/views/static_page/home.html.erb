@@ -1,3 +1,9 @@
 <h1>Home</h1>
-<p>Welcome to sunbox!</p>
-<p>You can either <%= link_to "Login", "#" %>, or <%= link_to "Register", "#" %>. </p>
+<p>Welcome to sunbox! You can either <%= link_to "Login", "#" %>, or <%= link_to "Register", "#" %>. </p>
+
+<h3>Newest Users</h3> 
+<%= render 'users/list_limited_users' %>
+
+<h3>Newest Songs</h3>
+<%= render 'songs/list_limited_songs' %>
+

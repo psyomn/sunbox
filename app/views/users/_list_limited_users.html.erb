@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.name, user %></td>
+    <td><%= "#{user.bio.split(" ")[0..10].join(" ")}..." %></td>
+  </tr>
+<% end %>
+</table>
