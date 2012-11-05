@@ -7,7 +7,7 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= link_to user.name, user %></td>
-    <td><%= "#{user.bio.split(" ")[0..10].join(" ")}..." %></td>
+    <td><%= user.bio %></td>
   </tr>
 <% end %>
 </table>

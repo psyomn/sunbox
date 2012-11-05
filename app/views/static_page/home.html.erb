@@ -1,5 +1,9 @@
 <h1><%= image_tag "/favicon.ico" %> Home</h1>
-<p>Welcome to sunbox! You can either <%= link_to "Login", "#" %>, or <%= link_to "Register", "#" %>. </p>
+
+<% unless user_signed_in? %>
+  <p>Welcome to sunbox! You can either <%= link_to "Login", new_user_session_path %>, 
+  or <%= link_to "Register", new_user_registration_path %>. </p>
+<% end %> 
 
 <%= render 'partials/latest_news_item' %>
 
