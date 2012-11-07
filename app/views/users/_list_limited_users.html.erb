@@ -5,9 +5,13 @@
   </tr>
 
 <% @users.each do |user| %>
+
+<% if user.name %> 
   <tr>
     <td><%= link_to user.name, user %></td>
     <td><%= user.bio %></td>
   </tr>
+<% end %> 
+
 <% end %>
 </table>

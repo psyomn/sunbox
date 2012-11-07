@@ -4,7 +4,7 @@
   <% unless user_signed_in? %> 
     <li><%= link_to "Login", new_user_session_path %></li> 
   <% else %> 
-    <li><%= link_to "Logout", destroy_user_session_path %></li> 
+    <li><%= link_to "Logout (#{current_user.name})", destroy_user_session_path %></li> 
   <% end %> 
   <li><%= link_to "About", about_path %></li>
   <li><%= link_to "Contact", contact_path %></li>
@@ -12,7 +12,7 @@
   <% if user_signed_in? %>
     <li> <%= link_to "My Profile", current_user %> </li>
     <li> <%= link_to "Collaborations", "#" %></li> 
-    <li> <%= link_to "Inbox [2]", "#" %></li> 
+    <li> <%= link_to "Inbox [#{current_user.received_messages.count}]", "#" %></li> 
   <% end %> 
 
 </div>
