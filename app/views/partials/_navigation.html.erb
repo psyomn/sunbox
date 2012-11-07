@@ -10,6 +10,7 @@
   <li><%= link_to "Contact", contact_path %></li>
 
   <% if user_signed_in? %>
+    <li> <%= link_to "My Profile", current_user %> </li>
     <li> <%= link_to "Collaborations", "#" %></li> 
     <li> <%= link_to "Inbox [2]", "#" %></li> 
   <% end %> 
