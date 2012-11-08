@@ -11,6 +11,7 @@ gem 'devise'
 gem 'cancan'
 gem 'rmagick'
 gem 'paperclip'
+gem 'gravatar_image_tag'
 
 
 # Gems used only for assets and not required
