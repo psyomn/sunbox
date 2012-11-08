@@ -1,5 +1,6 @@
 <table>
   <tr>
+    <th></th> 
     <th>Name</th>
     <th>Bio</th>
   </tr>
@@ -8,6 +9,7 @@
 
 <% if user.name %> 
   <tr>
+    <td><%= gravatar_image_tag(user.email, :alt => user.name) %></td>
     <td><%= link_to user.name, user %></td>
     <td><%= user.bio %></td>
   </tr>
