@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   # Validations
   validates :email, :presence => true
+  validates :name, :presence => true, :uniqueness => true
 
   # Relations 
   has_many :sent_messages, :class_name => "Message", :foreign_key => "from_user_id" 
