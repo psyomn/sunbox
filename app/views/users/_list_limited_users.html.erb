@@ -9,7 +9,7 @@
 
 <% if user.name %> 
   <tr>
-    <td><%= gravatar_image_tag(user.email, :alt => user.name) %></td>
+    <td><%= gravatar_image_tag(user.email, :alt => user.name, :gravatar => { :size => 24}) %></td>
     <td><%= link_to user.name, user %></td>
     <td><%= user.bio %></td>
   </tr>

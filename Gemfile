@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 gem 'devise'
 gem 'cancan'
+gem 'rolify'
 gem 'rmagick'
 gem 'paperclip'
 gem 'gravatar_image_tag'
