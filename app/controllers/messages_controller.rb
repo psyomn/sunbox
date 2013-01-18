@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   before_filter :authenticate_user!
   # GET /messages
   def index
-    @messages = Message.find_by_to_user_id(current_user.id)
+    @messages = Message.find_all_by_to_user_id(current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
