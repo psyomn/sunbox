@@ -1,3 +1,4 @@
+<% unless @messages.empty? %> 
 <h1>My Messages</h1>
 
 <table>
@@ -14,4 +15,7 @@
   </tr> 
 <% end %> 
 </table> 
-<%= link_to 'New Message', new_message_path %>
+<% end %> 
+
+
+<%= link_to 'Compose', new_message_path %>
