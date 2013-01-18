@@ -6,6 +6,8 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.find_all_by_to_user_id(current_user.id)
 
+    flash[:notice] = "No new messages." if @messages.empty?
+
     respond_to do |format|
       format.html # index.html.erb
     end
