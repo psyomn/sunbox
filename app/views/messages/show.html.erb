@@ -1,25 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>To user:</b>
-  <%= @message.to_user %>
+  <b>To:</b> <%= link_to @message.to_user.name, @message.to_user %>
 </p>
 
-<p>
-  <b>Contents:</b>
+<div class="news">
   <%= @message.contents %>
-</p>
-
-<p>
-  <b>From user (id):</b>
-  <%= @message.from_user_id %>
-</p>
-
-<p>
-  <b>To user (id):</b>
-  <%= @message.to_user_id %>
-</p>
-
+</div> 
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
 <%= link_to 'Back', messages_path %>
+
