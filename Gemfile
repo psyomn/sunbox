@@ -13,6 +13,7 @@ gem 'rolify'
 gem 'rmagick'
 gem 'paperclip'
 gem 'gravatar_image_tag'
+gem 'jquery-ui-rails'
 
 
 # Gems used only for assets and not required
