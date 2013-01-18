@@ -38,19 +38,17 @@ class MessagesController < ApplicationController
 
   # POST /messages
   def create
-    @message = Message.new(params[:message])
     user = User.find_by_name(params[:message][:to_user])
 
-    p params 
-    puts " ---- The user is : #{user.name} (#{user.id}) ---- " 
-
     respond_to do |format|
-      
       if user.nil? 
         format.html { redirect_to action: "new" } 
       else 
+        @message = Message.new
         @message.to_user_id = user.id
         @message.from_user_id = current_user.id 
+        @message.subject = params[:message][:subject]
+        @message.contents = params[:message][:contents]
       end 
 
       if @message.save
