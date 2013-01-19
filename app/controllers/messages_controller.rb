@@ -17,8 +17,8 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
 
-    if @message.seen == 0
-      @message.seen = 1
+    if @message.status == 0
+      @message.status = 1
       @message.save
     end 
 
@@ -54,7 +54,7 @@ class MessagesController < ApplicationController
         @message.from_user_id = current_user.id 
         @message.subject = params[:message][:subject]
         @message.contents = params[:message][:contents]
-        @message.seen = false
+        @message.status = 0
       end 
 
       if @message.save

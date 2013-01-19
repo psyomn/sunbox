@@ -12,7 +12,7 @@
 </tr>
 <% @messages.each do |message| %>
   <tr> 
-    <td><%= message.seen ? "" : "New!" %></td> 
+    <td><%= message.status == 0 ? "New!" : "" %></td> 
     <td><%= link_to message.from_user.name, message.from_user %> </td>
     <td><b>Subject</b>: <%= link_to message.subject, message %></td>
     <td><%= message.created_at %></td>
