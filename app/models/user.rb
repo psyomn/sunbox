@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
   has_many :sent_messages, :class_name => "Message", :foreign_key => "from_user_id" 
   has_many :received_messages, :class_name => "Message", :foreign_key => "to_user_id"
 
+  def unread_messages
+    self.received_messages.select{|m| m.status == 0}
+  end
+
 end

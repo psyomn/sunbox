@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
 
-    if @message.status == 0
+    if @message.status == 0 and current_user.id == @message.to_user.id
       @message.status = 1
       @message.save
     end 
@@ -58,7 +58,7 @@ class MessagesController < ApplicationController
       end 
 
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully sent.' }
+        format.html { redirect_to @message, notice: 'Message was sent.' }
       else
         format.html { render action: "new" }
       end
