@@ -17,6 +17,11 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
 
+    unless @message.seen
+      @message.seen = true
+      @message.save
+    end 
+
     respond_to do |format|
       format.html # show.html.erb
     end
@@ -49,10 +54,11 @@ class MessagesController < ApplicationController
         @message.from_user_id = current_user.id 
         @message.subject = params[:message][:subject]
         @message.contents = params[:message][:contents]
+        @message.seen = false
       end 
 
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html { redirect_to @message, notice: 'Message was successfully sent.' }
       else
         format.html { render action: "new" }
       end
