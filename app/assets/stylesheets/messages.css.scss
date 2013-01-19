@@ -1,3 +1,21 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.compose{
+  background-color:#FEF0FF;
+  width:100px;
+  padding:5px;
+  text-align:center;
+  border: {
+    radius:4px;
+    width:1px;
+    color:#505050;
+    style:solid;
+  }
+
+}
+
+.message_listing{
+
+}

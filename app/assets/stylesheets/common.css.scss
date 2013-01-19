@@ -107,3 +107,19 @@ div.authforms
   }
   text-align:center;
 }
+
+.notice{
+  border: {
+    color:green;
+    style:solid;
+    size:1px;
+  }
+}
+
+.alert{
+  border: {
+    color:red;
+    style:solid;
+    size:1px;
+  }
+}
