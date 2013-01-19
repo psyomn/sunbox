@@ -17,8 +17,8 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
 
-    unless @message.seen
-      @message.seen = true
+    if @message.seen == 0
+      @message.seen = 1
       @message.save
     end 
 
