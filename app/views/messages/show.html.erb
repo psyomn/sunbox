@@ -1,10 +1,12 @@
 <p>
-  <b>To:</b> <%= link_to @message.to_user.name, @message.to_user %>
+  <b>From:</b> <%= link_to @message.from_user.name, @message.to_user %>
 </p>
 
 <div class="news">
   <%= @message.contents %>
 </div> 
+
+<%= link_to 'reply', '#'  %>  
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
 <%= link_to 'Back', messages_path %>
