@@ -1,10 +1,10 @@
 <b>From:</b> <%= link_to @message.from_user.name, @message.to_user %> | 
 <%= link_to 'Back To Inbox', messages_path %>
 
-<div class="news">
+<div class="mail">
   <%= @message.contents %>
 </div> 
 
-<%= link_to "reply", "#" %> 
+<%= link_to "reply", "/messages/#{@message.id}/reply" %> 
 
 
