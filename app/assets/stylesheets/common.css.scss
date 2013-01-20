@@ -32,15 +32,15 @@ div.navigation
   }
 }
 
-div.footer
-{
+div.footer {
   color:#AAAAAA;
   font-size:10px;
   text-align:center;
-  border:
-  {
-    top:
-    {
+  margin: {
+    top:5px;
+  }
+  border: {
+    top: {
       color:#FADADA;
       style:dotted;
       width:1px;
@@ -109,10 +109,13 @@ div.authforms
 }
 
 .notice{
+  padding:5px;
+  background-color:#BBFFBB;
   border: {
-    color:green;
+    radius:5px;
+    color:#008E00;
     style:solid;
-    size:1px;
+    width:1px;
   }
 }
 

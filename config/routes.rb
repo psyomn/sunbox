@@ -1,6 +1,9 @@
 Sunbox::Application.routes.draw do
   
+  match "/messages/sent" => "messages#sent"
   resources :messages, :except => [:edit, :update]
+  get   "/messages/:id/reply" => "messages#reply"
+  post  "/messages/:id/reply/create" => "messages#create_reply"
 
   devise_for :users
 

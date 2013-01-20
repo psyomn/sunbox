@@ -17,8 +17,31 @@
 }
 
 .message_listing{
+  border:none;
   margin: {
     top:10px;
     bottom:10px;
   }
+  td {
+    padding:5px;
+  }
+  tr.odd td{
+    background-color:#FEF0FF;
+  }
+}
+
+.mail{
+  border: {
+    radius:5px;
+    style:solid;
+    width:1px;
+    color:#E7F6FF;
+  }
+  margin: {
+    top:10px;
+    bottom:10px;
+  }
+  padding:5px;
+  color:#00BBDD;
+  background-color:#E7FFFF;
 }
