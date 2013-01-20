@@ -36,11 +36,6 @@ class MessagesController < ApplicationController
     end
   end
 
-  # GET /messages/1/edit
-  def edit
-    @message = Message.find(params[:id])
-  end
-
   # POST /messages
   def create
     user = User.find_by_name(params[:message][:to_user])
