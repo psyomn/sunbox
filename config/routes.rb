@@ -1,6 +1,6 @@
 Sunbox::Application.routes.draw do
   
-  resources :messages, :except => [:edit]
+  resources :messages, :except => [:edit, :update]
 
   devise_for :users
 

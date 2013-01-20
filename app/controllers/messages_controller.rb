@@ -16,14 +16,16 @@ class MessagesController < ApplicationController
   # GET /messages/1
   def show
     @message = Message.find(params[:id])
-
-    if @message.status == 0 and current_user.id == @message.to_user.id
-      @message.status = 1
-      @message.save
-    end 
-
     respond_to do |format|
-      format.html # show.html.erb
+      if current_user.id == @message.to_user_id
+        if @message.status == 0 and current_user.id == @message.to_user.id
+          @message.status = 1
+          @message.save
+        end 
+        format.html # show.html.erb
+      else 
+        format.html{ redirect_to action: "index" }
+      end
     end
   end
 
@@ -56,20 +58,6 @@ class MessagesController < ApplicationController
         format.html { redirect_to @message, notice: 'Message was sent.' }
       else
         format.html { render action: "new" }
-      end
-    end
-  end
-
-  # PUT /messages/1
-  # PUT /messages/1.json
-  def update
-    @message = Message.find(params[:id])
-
-    respond_to do |format|
-      if @message.update_attributes(params[:message])
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
-      else
-        format.html { render action: "edit" }
       end
     end
   end
