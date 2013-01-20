@@ -1,24 +1,8 @@
 <% unless @messages.empty? %> 
 <h1>My Messages</h1>
 
-<%= link_to 'Compose', new_message_path, :class => "compose"%>
+<%= render 'message_links' %> 
+<%= render 'list_messages' %> 
+<%= render 'message_links' %> 
 
-<table class="message_listing">
-<tr>  
-  <th></th> 
-  <th>From</th>
-  <th>Subject</th>
-  <th>Date</th>
-</tr>
-<% @messages.each do |message| %>
-  <tr> 
-    <td><%= message.status == 0 ? "New!" : "" %></td> 
-    <td><%= link_to message.from_user.name, message.from_user %> </td>
-    <td><b>Subject</b>: <%= link_to message.subject, message %></td>
-    <td><%= message.created_at %></td>
-  </tr> 
 <% end %> 
-</table> 
-<% end %> 
-
-<%= link_to 'Compose', new_message_path, :class => "compose"%>

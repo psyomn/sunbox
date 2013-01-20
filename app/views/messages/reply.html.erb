@@ -4,7 +4,7 @@
   <b><%= @message_from.from_user.name %></b>:<%= @message_from.contents %> 
 </div>
 
-<%= form_for(@reply, :method => "post") do %>
+<%= form_tag "/messages/#{@message_from.id}/reply/create", :method => "post" do %>
   <div class="field"> 
     <%= text_field_tag :subject, "Re: #{@message_from.subject}"%> 
   </div>
@@ -15,5 +15,5 @@
   <%= hidden_field :previous_message_id, :value => @message_from.id %> 
   <%= hidden_field :to_user, :value => @message_from.to_user_id %> 
   
-  <%= submit_tag :value => :Reply %> 
+  <%= submit_tag :Reply %> 
 <% end %> 
