@@ -1,2 +1,17 @@
 == Sunbox
 A collaboration platform for sunvox users. 
+
+== How To
+
+Install Gems: 
+
+  bunlde install --path vendor/bundle
+
+Make Db: 
+
+  rake db:load
+
+And start the rails server:
+
+  rails s
+
