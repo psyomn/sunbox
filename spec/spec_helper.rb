@@ -35,4 +35,7 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # https://github.com/rspec/rspec-rails/issues/360
+  config.include Capybara::DSL
 end
