@@ -14,6 +14,7 @@ gem 'rmagick'
 gem 'paperclip'
 gem 'gravatar_image_tag'
 gem 'jquery-ui-rails'
+gem 'rspec-rails', '>= 2.11.0'
 
 
 # Gems used only for assets and not required
