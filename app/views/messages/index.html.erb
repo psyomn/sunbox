@@ -2,7 +2,7 @@
 <h1>My Messages</h1>
 
 <%= render 'message_links' %> 
-<%= render 'list_messages' %> 
+<%= render 'list_messages', :messages => @messages %> 
 <%= render 'message_links' %> 
 
 <% end %> 

@@ -1,10 +1,14 @@
 <%= link_to @message.from_user.name, @message.to_user %> &rarr; <%= link_to @message.to_user.name %> | 
-<%= link_to 'Back To Inbox', messages_path %>
+<%= link_to 'Back To Inbox', @messages_path %>
 
 <div class="mail">
   <%= @message.contents %>
+
+  <div class="mail">
+    <%= @message.next_message.contents %> 
+  </div>
 </div> 
 
-<%= link_to "reply", "/messages/#{@message.id}/reply" %> 
+<%= link_to "reply", "/@messages/#{@message.id}/reply" %> 
 
 

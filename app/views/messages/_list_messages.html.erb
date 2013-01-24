@@ -1,5 +1,5 @@
 <table class="message_listing">
-<% @messages.each_with_index do |message,index| %>
+<% messages.each_with_index do |message,index| %>
   <tr class="<%= index % 2 == 0 ? "" : "odd" %>"> 
     <td><%= message.status == 0 ? "New!" : "" %></td> 
     <td><%= link_to message.from_user.name, message.from_user %> &rarr;
