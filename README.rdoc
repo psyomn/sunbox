@@ -22,3 +22,9 @@ Then visit on your browser:
 You can also seed the database with: 
 
   rake db:seed
+
+That creates two accounts you can create for testing: 
+
+  u:john@john.com, p:testtest
+  u:helen@helen.com, p:testtest
+
