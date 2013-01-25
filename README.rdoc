@@ -15,3 +15,10 @@ And start the rails server:
 
   rails s
 
+Then visit on your browser:
+
+  http://localhost/
+
+You can also seed the database with: 
+
+  rake db:seed
