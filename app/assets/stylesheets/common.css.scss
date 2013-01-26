@@ -74,14 +74,13 @@ h3
 
 .news
 {
-  h4
-  {
+  h4{
     margin:0;
     padding:3px;
     background-color:#FFFF73;
   }
-  border:
-  {
+  border: {
+    radius:5px;
     color:#DFDF6D;
     style:solid;
     width:1px;
