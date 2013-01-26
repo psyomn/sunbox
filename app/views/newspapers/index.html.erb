@@ -1,25 +1,13 @@
-<h1>Listing newspapers</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>News</h1>
 
 <% @newspapers.each do |newspaper| %>
-  <tr>
-    <td><%= newspaper.title %></td>
-    <td><%= newspaper.text %></td>
-    <td><%= link_to 'Show', newspaper %></td>
-    <td><%= link_to 'Edit', edit_newspaper_path(newspaper) %></td>
-    <td><%= link_to 'Destroy', newspaper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="news"> 
+  <h4> <%= newspaper.title %> 
+       [<%= link_to 'Edit', edit_newspaper_path(newspaper) %> | 
+       <%= link_to 'Delete', newspaper, method: :delete, data: { confirm: "Are you sure?"} %>] </h4> 
+  <%= newspaper.text %>
+  </div>
 <% end %>
-</table>
-
-<br />
 
 <%= link_to 'New Newspaper', new_newspaper_path %>
+

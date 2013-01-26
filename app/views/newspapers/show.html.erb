@@ -1,13 +1,8 @@
-<p>
-  <b>Title:</b>
-  <%= @newspaper.title %>
-</p>
+<div class="news">
+<h4> <%= @newspaper.title %> </h4> 
 
-<p>
-  <b>Text:</b>
-  <%= @newspaper.text %>
-</p>
+<%=raw @newspaper.text %>
 
+</div>
 
-<%= link_to 'Edit', edit_newspaper_path(@newspaper) %> |
-<%= link_to 'Back', newspapers_path %>
+<%= link_to "All news", newspapers_path %> 
