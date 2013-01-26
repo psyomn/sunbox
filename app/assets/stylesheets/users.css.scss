@@ -1,3 +1,24 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.avatarspace{
+  text-align:center;
+  vertical-align:top;
+}
+
+.userspace{
+  width:300px;
+}
+
+.bio{
+  border: {
+    color:#FBC7FD;
+    width:1px;
+    style:solid;
+    radius:5px;
+  }
+  min-width:500px;
+  padding:5px;
+  background-color:#FEF0FF;
+}
