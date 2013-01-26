@@ -107,21 +107,24 @@ div.authforms
   text-align:center;
 }
 
-.notice{
+.notice, .alert{
   padding:5px;
-  background-color:#BBFFBB;
   border: {
     radius:5px;
-    color:#008E00;
     style:solid;
     width:1px;
   }
 }
 
-.alert{
+.notice {
+  background-color:#BBFFBB;
   border: {
-    color:red;
-    style:solid;
-    size:1px;
+    color:#008E00;
+  }
+}
+.alert{
+  background-color:#FFADAD;
+  border: {
+    color:#E74949;
   }
 }
