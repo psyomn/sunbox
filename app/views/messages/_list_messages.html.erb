@@ -2,8 +2,7 @@
 <% messages.each_with_index do |message,index| %>
   <tr class="<%= index % 2 == 0 ? "" : "odd" %>"> 
     <td><%= message.status == 0 ? "New!" : "" %></td> 
-    <td><%= link_to message.from_user.name, message.from_user %> &rarr;
-    <%= link_to message.to_user.name, message.to_user %></td>
+    <td>&rarr;<%= link_to message.from_user.name, message.from_user %> </td>
     <td><b>Subject</b>: <%= link_to message.subject, message %></td>
     <td><%= message.created_at %></td>
   </tr> 

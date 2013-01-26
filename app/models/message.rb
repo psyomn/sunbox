@@ -7,6 +7,6 @@ class Message < ActiveRecord::Base
   belongs_to :from_user, :foreign_key => :from_user_id, :class_name => "User"
   belongs_to :to_user, :foreign_key => :to_user_id, :class_name => "User"
 
-  has_one :next_message, :foreign_key => :next_message_id, :class_name => "Message"
+  has_one :previous_message, :foreign_key => :previous_message_id, :class_name => "Message"
 
 end

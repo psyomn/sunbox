@@ -47,8 +47,11 @@ class MessagesController < ApplicationController
   end
   
   # POST /messages/1/reply/create
+  # TODO REMOVE ME 
   def create_reply
     flash[:notice] = "Replied to message."
+
+
     respond_to do |format| 
       format.html { redirect_to action: "index" }
     end
@@ -61,12 +64,17 @@ class MessagesController < ApplicationController
 
 
   # POST /messages
+  # TODO: check that the user replying, CAN reply to the message
   def create
     user = User.find_by_name(params[:message][:to_user])
 
     respond_to do |format|
       if user.nil? 
+        flash[:alert] = "No such user."
         format.html { redirect_to action: "new" } 
+      elsif !user_exists_in_thread(params[:message][:previous_message_id])
+        flash[:alert] = "What are you trying to do?"
+        format.html { redirect_to action: "new"}
       else 
         @message = Message.new
         @message.to_user_id = user.id
@@ -90,5 +98,22 @@ class MessagesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to messages_url }
     end
+  end
+
+private
+
+  # Check to see if a user actually exists in a mail thread
+  def user_exists_in_thread(message_id)
+    it = Message.find(message_id)
+
+    begin
+      return true if it.to_user_id == current_user.id
+      it = it.previous_message
+    end while !it.previous_message.nil?
+
+    false
+  rescue
+    # No message found, new thread, allow reply (new message in this case)
+    true
   end
 end

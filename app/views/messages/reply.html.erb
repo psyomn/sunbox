@@ -4,16 +4,18 @@
   <b><%= @message_from.from_user.name %></b>:<%= @message_from.contents %> 
 </div>
 
-<%= form_tag "/messages/#{@message_from.id}/reply/create", :method => "post" do %>
-  <div class="field"> 
-    <%= text_field_tag :subject, "Re: #{@message_from.subject}"%> 
-  </div>
-  <div class="field">
-    <%= text_area_tag :contents%> <br/>
-  </div>
+<%= form_for @reply do |f| %> 
 
-  <%= hidden_field :previous_message_id, :value => @message_from.id %> 
-  <%= hidden_field :to_user, :value => @message_from.to_user_id %> 
-  
-  <%= submit_tag :Reply %> 
+  <div class="field">
+  <%= f.label :contents %> <br/>
+  <%= f.text_area :contents %> 
+  </div> 
+
+  <%= f.hidden_field :to_user, :value => @message_from.from_user.name %> 
+  <%= f.hidden_field :previous_message_id, :value => @message_from.id %> 
+  <%= f.hidden_field :subject, :value => "Re: #{@message_from.subject.gsub!(/Re: /, '')}" %> 
+
+  <%= f.submit :value => "Reply" %> 
+
 <% end %> 
+
