@@ -1,5 +1,7 @@
 == Sunbox
 A collaboration platform for sunvox users. 
+This should be easy to adapt for other similar platforms, though it should be forked at version 1.
+After version 1 I will be implementing non generic things (file analysis of sunvox song - files).
 
 == How To
 
