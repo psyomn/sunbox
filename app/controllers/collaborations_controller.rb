@@ -1,4 +1,6 @@
 class CollaborationsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /collaborations
   # GET /collaborations.json
   def index
