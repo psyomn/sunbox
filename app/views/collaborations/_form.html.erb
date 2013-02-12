@@ -12,13 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :owner_id %><br />
-    <%= f.number_field :owner_id %>
+    <%= f.hidden_field :owner_id %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
+  <div class="field">
+    <p> Invite Members </p> 
+    <p><%= link_to "Add+", "#" %></p>
+  </div> 
   <div class="actions">
     <%= f.submit %>
   </div>
