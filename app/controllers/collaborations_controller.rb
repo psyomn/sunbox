@@ -27,6 +27,7 @@ class CollaborationsController < ApplicationController
   # GET /collaborations/new.json
   def new
     @collaboration = Collaboration.new
+    @collaboration.owner_id = current_user.id 
 
     respond_to do |format|
       format.html # new.html.erb
