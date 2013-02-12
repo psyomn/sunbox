@@ -30,3 +30,15 @@ That creates two accounts you can create for testing:
   u:john@john.com, p:testtest
   u:helen@helen.com, p:testtest
 
+== Documentation
+
+Refer to the wiki for Use Cases, and any other documentation artifact of interest.
+
+https://github.com/psyomn/sunbox/wiki
+
+== Feature Suggestions / Bugs
+
+Use the github issue tracker.
+
+https://github.com/psyomn/sunbox/issues?state=open
+
