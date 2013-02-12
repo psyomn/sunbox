@@ -11,7 +11,7 @@
 
   <% if user_signed_in? %>
     <li> <%= link_to "My Profile", current_user %> </li>
-    <li> <%= link_to "Collaborations", "#" %></li> 
+    <li> <%= link_to "Collaborations", collaborations_path %></li> 
     <li> <%= link_to "Inbox [#{current_user.unread_messages.count}]", messages_path %></li> 
   <% end %> 
 
