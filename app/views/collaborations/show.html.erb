@@ -1,11 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>Owner:</b>
-  <%= @collaboration.owner_id %>
+  <b>Collaboration Owner:</b> <%= link_to @collaboration.owner.name, @collaboration.owner %>
 </p>
 
-<p>
+<p class="description">
   <b>Description:</b>
   <%= @collaboration.description %>
 </p>
@@ -13,3 +10,4 @@
 
 <%= link_to 'Edit', edit_collaboration_path(@collaboration) %> |
 <%= link_to 'Back', collaborations_path %>
+
