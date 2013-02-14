@@ -10,6 +10,10 @@ class Ability
       can :manage, :all
     else
       # can :read, :all
+      can :read, User 
+      can :manage, Song if user.has_role?(:moderator, Song)
+      can :manage, Collaboration if user.has_role?(:moderator, Collaboration)
+      can :manage, CollaborationPost if user.has_role?(:moderator, CollaborationPost)
     end
     
     #
