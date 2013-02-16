@@ -42,3 +42,10 @@ Use the github issue tracker.
 
 https://github.com/psyomn/sunbox/issues?state=open
 
+== Developers
+
+It would be nice to develop alongside someone else. If you are new and
+want to learn Rails by practice, I could give you a hand. Seasoned developers
+are welcomed as well.
+
+
