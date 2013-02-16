@@ -111,3 +111,23 @@ div.authforms
     color:#E74949;
   }
 }
+
+.icon {
+  width:16px;
+  height:16px;
+  float:left;
+}
+
+.avatar_block {
+  margin-right:2px;
+  width:130px;
+  float:left;
+
+  .name {
+    text-align:center;
+    background-color:#000000;
+    font-weight:bold;
+    a { color:#FFFFFF;}
+  }
+}
+
