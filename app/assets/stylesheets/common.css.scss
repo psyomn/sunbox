@@ -12,22 +12,18 @@ body
 div.navigation
 {
   width:100%; 
-  .contents
-  {  
-    li
-    {
+  .contents {  
+    li {
       list-style:none;
       display:inline;
-      padding:
-      {
+      padding: {
         left:5px;
         right:5px;
       }
     }
     padding:5px;
   }
-  background:
-  {
+  background: {
     color:#FBC7FD;
   }
 }
@@ -50,22 +46,20 @@ div.footer {
 
 div#wrap
 {
-  #contents
-  {
+  #contents {
     width:1000px;
     padding:8px;
     margin-left:auto;
     margin-right:auto;
     background-color:#FFFFFF;
+    shadow-box:4px 4px 4px 4px #000000;
   }
 
 }
 
-h3
-{
+h3 {
   padding:3px;
-  border:
-  {
+  border: {
     top:#DDDDDD 1px solid;
     right:#DDDDDD 1px solid;
   }
@@ -74,15 +68,12 @@ h3
 
 div.authforms
 {
-  margin:
-  {
+  margin: {
     top:30px;
     bottom:30px;
   }
-  label
-  {
-    font:
-    { 
+  label {
+    font: { 
       size:15px;
       weight:bold;
     }

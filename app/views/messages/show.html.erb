@@ -1,6 +1,7 @@
 <div class="message_icon icon">&nbsp;</div>
 <%= link_to @message.from_user.name, @message.to_user %> &rarr; 
-<%= link_to @message.to_user.name %> | 
+<%= link_to @message.to_user.name %>, 
+<%= link_to @message.subject %>  | 
 <%= link_to 'Back To Inbox', messages_path %>
 
 <div class="mail">
