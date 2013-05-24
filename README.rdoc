@@ -19,7 +19,7 @@ And start the rails server:
 
 Then visit on your browser:
 
-  http://localhost/
+  http://localhost:3000/
 
 You can also seed the database with: 
 
