@@ -32,6 +32,10 @@ Sunbox::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  # Do not compile assets. (Assets were not showing up after updating gems on ruby -
+  # notably after upgrading to ruby 2.0)
+  config.assets.compile = false
+
   # Expands the lines which load the assets
   config.assets.debug = false
 end
